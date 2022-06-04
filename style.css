@@ -1,0 +1,309 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+#home {
+  text-align: center;
+}
+#roadmap {
+  background-color: #08040f;
+  color: #fff;
+  padding-top: 20rem;
+}
+.row-rm {
+  padding-bottom: 5rem;
+}
+
+body {
+  background: linear-gradient(#08040f, #08040f);
+}
+img,
+object {
+  max-height: 100%;
+  max-width: 100%;
+  margin-top: 0%;
+}
+.display-4 {
+  font-family: "Blaka", cursive;
+  text-align: center;
+  color: #fff;
+  margin-top: 5rem;
+}
+.lead {
+  font-family: "Righteous", cursive;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30rem;
+}
+#story {
+  background-color: #08040f;
+  color: #fff;
+}
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5rem;
+}
+.navbar {
+  margin-bottom: 0%;
+}
+.navbar li {
+  font-family: "Righteous", cursive;
+}
+
+.navbar ul li {
+  list-style: none;
+  margin-left: 50px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  padding: 6px 50px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+  background: #fff;
+  color: #2b1055;
+}
+
+section {
+  position: relative;
+  padding-top: 5rem;
+}
+
+.title {
+  font-family: "Blaka", cursive;
+  font-size: 60px;
+}
+
+/* Awal Syntax Team */
+
+#team {
+  background-color: #08040f;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.container .card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: #210f4183;
+  margin: 20px;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+.container .card .content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s;
+}
+
+.container .card:hover .content {
+  transform: translateY(-50px);
+}
+
+.container .card .content .imgBx {
+  position: relative;
+  width: 270px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.container .card .content .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .card .content .contentBx h3 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 10px;
+  line-height: 1.1em;
+}
+
+.container .card .content .contentBx h3 span {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: initial;
+}
+
+.container .card .sci {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+}
+
+.container .card .sci li {
+  list-style: none;
+  margin: 50px;
+  transform: translateY(20px);
+  transition: 0.5s;
+  opacity: 0;
+  text-align: center;
+  margin-bottom: 4px;
+  margin-left: 25px;
+}
+
+.container .card:hover .sci li {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.container .card .sci li a {
+  color: #fff;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+}
+/* Akhir Syntax Team */
+
+/* Button Animation */
+
+.glow-on-hover {
+  width: 110px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #2b1055;
+  box-shadow: 0 0px 5px rgb(0, 0, 0);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin: 3rem;
+  font-family: "Righteous", cursive;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: rgb(0, 0, 0);
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #210f4183;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  outline: 5px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* FAQ CSS */
+
+.accordion {
+  align-items: center;
+}
+
+.accordion-body {
+  background-color: #000000;
+  color: #fff;
+}
+
+.item-1 {
+  width: 50%;
+  height: 50%;
+  margin-left: 5rem;
+  margin-top: 10rem;
+}
+.item-2 {
+  width: 50%;
+  height: 50%;
+  margin-left: 55rem;
+  margin-top: 10rem;
+}
+
+.item-3 {
+  width: 50%;
+  height: 50%;
+  margin-left: 5rem;
+  margin-top: 10rem;
+}
+
+.item-4 {
+  width: 50%;
+  height: 50%;
+  margin-left: 55rem;
+  margin-top: 10rem;
+}
+.item-5 {
+  width: 80%;
+  height: 80%;
+  margin-left: 13rem;
+  margin-top: 10rem;
+}
+
+.item-1:hover .content {
+  transform: translateY(-50px);
+}
+/* .container .card:hover .content {
+  transform: translateY(-50px); */
